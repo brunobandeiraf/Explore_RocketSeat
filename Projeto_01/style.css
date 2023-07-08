@@ -47,7 +47,7 @@ a {
     color: #FF9900;
 }
 
-p {
+p, #footer {
     color: #7D7987;
 
     font-size: 14px;
@@ -57,4 +57,21 @@ p {
 /*Pega o a que é anterior a ele*/
 #footer a + a {
     margin-left: 28px;
+}
+
+.line {
+    width: 568px;
+    height: 0px;
+    margin: 0 auto 8px;
+
+    border: 1px solid #ECEFF2
+}
+
+#balls {
+    /*
+        Position é uma camada sobre a outra
+    */
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
