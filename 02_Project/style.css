@@ -1,12 +1,17 @@
 body{
     margin: 0;
-
     font-family: 'Open Sans', sans-serif;
+    
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(227, 255, 248, 0.38) 100%);
+
+    /*Mínimo de 100% da área visível*/
+    min-height: 100vh;
 }
 
 .page{
     width: 1000px;
-    margin: 65px auto 0px;
+    margin: 0 auto;
+    padding-top: 65px;
 }
 
 nav{
@@ -29,12 +34,24 @@ a{
     color: #1F1534;
     text-decoration: none;/*remover sublinhado de link*/
 }
+
+ul li a{
+    opacity: 0.5;
+}
+
 ul li a:hover{
     font-weight: bold;
+    opacity: 1;
 }
 
 h1, ul{
     font-family: 'Mulish', sans-serif;
+}
+
+main {
+    display: flex; /*text e img um ao lado do outro*/
+    align-items: center; /*Mesmo alinhamento*/
+    justify-content: space-between;/*Um para cada lado*/
 }
 
 h1{
@@ -52,23 +69,52 @@ h1 span {
     font-weight: bold; /*atribuir negrito*/
 }
 
-p {
+section p {
     font-size: 14px;
     line-height: 28px;
     color: #7D7987;
+
+    margin: 40px 0; /*40 cima e baixo e 0 nas laterais*/
 }
 
 button {
+    color: white;
     text-transform: uppercase; /*Tudo maiúsculo*/
-
     font-family: 'Open Sans', sans-serif;
+
+    background: #69B99D;
+    border: 0;
+    padding: 14px 32px 15px;
+
+    display: flex;/*alinhados*/
+    align-content: center;/*centralizar na horizontal*/
+    justify-content: center;/*centralizar vertical*/
+    gap: 10px;/*Espaço entre os itens*/
+
+    border-radius: 4px; /*Nos 4 cantos*/
+
+    cursor: pointer;/*Cursor com a mão de clique*/
+}
+
+button:hover{
+    background: #4ea788;
 }
 
 footer {
     font-size: 14px;
     line-height: 28px;
+
+    text-align: center; /*alinhar texto ao centro*/
+
+    margin-top: 80px;
 }
 
 footer a {
     font-weight: bold;
+}
+
+#balls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
