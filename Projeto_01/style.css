@@ -1,0 +1,60 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    text-align: center;
+    /*alinha todos os elementos ao centro*/
+    margin: 0;
+    /*padrão navegador põe 8px de margin*/
+}
+
+#hero {
+    width: 592px;
+    margin: 0 auto 72px;
+    /*
+        cima, direita, esquerda e baixo
+        
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 72px;
+        margin-left: auto;
+    */
+    /*auto - preenche todos os espaços de maneira igualmente*/
+}
+
+#hero img {
+    margin-bottom: 72px;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 49px;
+    line-height: 56px;
+    font-weight: normal;
+    /*negrito*/
+
+    margin-bottom: 32px;
+}
+
+h1 span {
+    /* span dentro do h1*/
+    color: #FF9900;
+    font-weight: bold;
+}
+
+span,
+a {
+    /* span e a*/
+    color: #FF9900;
+}
+
+p {
+    color: #7D7987;
+
+    font-size: 14px;
+    line-height: 28px;
+}
+
+/*Pega o a que é anterior a ele*/
+#footer a + a {
+    margin-left: 28px;
+}
