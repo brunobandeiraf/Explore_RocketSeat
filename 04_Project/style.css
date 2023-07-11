@@ -4,16 +4,58 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 62.5%; /*10px -> 1rem = 16px*/
+}
+
 ul {
     list-style: none;
 }
 
 body{
+    font-family: 'Epilogue', sans-serif;
+
     background: #ECE9FD;
 
-    padding: 60px 23px 66px;
+    padding: 6.0rem 2.3rem 6.6rem;
+    font-size: 1.6rem;
 }
 
 h1{
     font-family: 'Epilogue', sans-serif;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+
+    color: #090039;
+
+    margin-bottom: 1.5rem;
+}
+
+main p:first-child {
+    color: #7158EF;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+
+    margin-bottom: 1.7rem;
+}
+
+h1 + p {/*Pega o P anterior ao h1*/
+    color: rgba(10, 0, 57, 0.64);
+    line-height: 3.2rem;
+    
+    margin-bottom: 3.2rem;
+}
+
+a {
+    color: #090039;
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+ul {
+    margin-top: 7.2rem;
 }
