@@ -71,8 +71,42 @@ ul {
     margin-bottom: 2.4rem;
 }
 
-@media(min-width: 770px){/*acima*/
-    body{
-        color: red
+@media(min-width: 1120px){/*acima*/
+    main{
+        flex-direction: row;
+        max-width: fit-content;/*largura máxima encaixa conforme o tamanho do conteúdo*/
+        gap: 16rem;
+
+        padding: 9rem 6 rem;
+    }
+
+    /*1º div do main*/
+    /*flex: 1 - todos as divs terão tamanhos equivalentes*/
+    /* main > div { 
+        flex: 1; 
+        max-width: 50rem;
+    } */
+    .recipe {
+        max-width: 43.5rem;
+    }
+
+    .ingredients {
+        max-width: 52.5rem;
+    }
+
+    h1, h2{
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+
+    p, li, strong {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
     }
 }
