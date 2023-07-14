@@ -136,7 +136,7 @@ main h1 {
 .item {
   background-color: var(--color-base-white);
   border-radius: 0.8rem;
-  overflow: hidden;
+  overflow: hidden; /*imagem vai para dentro da caixa e não transborda*/
 }
 
 .item img {
@@ -162,7 +162,7 @@ main h1 {
   padding: 2.2rem;
   background-color: var(--color-base-white);
   z-index: 1;
-  position: relative;
+  position: relative; /*ao clicar, rotacionar e não saí do lugar*/
 }
 
 .details h2 {
@@ -203,12 +203,27 @@ footer {
   from {
     transform: translateY(var(--startY));
   }
+  /* to{
+
+  } 
+  from - to ou 0% para 100%
+  */
 }
 
 .item {
   --delay: .4s;
   animation: appear .4s var(--delay) backwards;
 }
+
+/* .item img {
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-delay: 0;
+  transition-timing-function: ease-in-out;
+
+  ou 
+  transition: all 200ms ease-out
+} */
 
 @keyframes appear {
   0% {
