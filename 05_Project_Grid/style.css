@@ -1,6 +1,9 @@
 body {
     margin: 0;
 }
+#app > * { /*Primeiro filho*/
+    border: 1 px solid red;
+}
 
 #app{
     display: grid;
@@ -12,12 +15,12 @@ body {
 
     height: 100vh;
 
-    border: 2px solid green;
+    gap: 20px;
+
+    box-sizing: border-box;/*Somar os box e evitar rolagem*/
+    padding: 30px;
 }
 
-#app > * { /*Primeiro filho*/
-    border: 1 px solid red;
-}
 
 #app header {
     grid-area: header;
@@ -37,6 +40,7 @@ body {
 
 #app footer {
     grid-area: footer;
+    background: green;
 }
 
 /*
@@ -46,6 +50,10 @@ CONTAINER (PAI)
 - - grid-template-columns
 - - grid-template-rows
 - - grid-template-areas
+
+- gap
+- - row-gap
+- - column-gap
 
 ITENS (FILHOS)
 - grid-column

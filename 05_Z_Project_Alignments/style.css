@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 8px;
+
+    place-content: center;
+
+}
+
+.grid > div {
+    background-color: blue;
+}
+
+
+/*
+PROPRIEDADES DE ALINHAMENTO
+Existem 9 propriedades fundamentais
+
+#6 aplicadas em containers
+- align-content - EIXO VERTICAL
+- justify-content - EIXO HORIZONTAL
+- place-content - AMBOS OS EIXOS
+
+- align-items - VERTICAL
+- justify-items - HORIZONTAL
+- place-items - AMBOS
+
+#3 aplicadas em items
+- align-self
+- justify-self
+- place-self
+
+PODEMOS SEPERAR EM 3 GRUPOS:
+align, justify e place
+
+Cada um deles irá obsevar ou o
+- conteúdo do elemento - content
+- items do elemento - items
+- o próprio elemento - self
+
+
+# Propriedades auto
+- grid-auto-flow
+- grid-auto-rows
+- grid-auto-columns
+
+*/
