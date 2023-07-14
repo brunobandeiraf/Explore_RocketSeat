@@ -88,6 +88,7 @@ ul li.active {
 .input-wrapper label {
   width: 1px;
   height: 1px;
+  /*Esconder o campo atrás do input para acessibilidade*/
   overflow: hidden;
   position: absolute;
 }
@@ -127,9 +128,9 @@ main h1 {
 .gallery {
   margin-top: 3.2rem;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.2rem;
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); /*3 colunas de tamanhos iguais*/
+  gap: 2.2rem;/*35px de distância*/
 }
 
 .item {
@@ -140,8 +141,12 @@ main h1 {
 
 .item img {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/9;/*proporção da imagem*/
   object-fit: cover;
+  /*
+    -  Deve ser redimensionado para se ajustar ao seu contêiner.
+    - cover - será redimensionada para que não deixe nenhum espaço vazio no contêiner
+  */
 
   transition: all 200ms ease-out;
 
