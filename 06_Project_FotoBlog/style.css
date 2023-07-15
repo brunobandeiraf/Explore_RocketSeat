@@ -206,11 +206,20 @@ footer {
     /*mover no eixo vertical*/
     transform: translateY(var(--startY));
   }
-  /* to{
+  /* to ou 0%{
 
   } 
-  from - to ou 0% para 100%
-  */
+  from ou 100%
+  - Exemplo abaixo:
+
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  } */
 }
 
 .item {
