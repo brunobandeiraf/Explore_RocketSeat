@@ -150,7 +150,7 @@ main h1 {
 
   transition: all 200ms ease-out;
 
-  display: block;
+  display: block;/*remover espaços entre imagem e titulo*/
 }
 
 .item img:hover {
@@ -191,16 +191,19 @@ footer p {
 
 header {
   --startY: -100%;
+  /*chamada para a animação*/
   animation: move .2s
 }
 
 footer {
   --startY: 100%;
+  /*chamada para a animação*/
   animation: move .2s;
 }
 
 @keyframes move {
   from {
+    /*mover no eixo vertical*/
     transform: translateY(var(--startY));
   }
   /* to{
@@ -211,8 +214,11 @@ footer {
 }
 
 .item {
-  --delay: .4s;
-  animation: appear .4s var(--delay) backwards;
+  --delay: .4s; 
+  /*chamada para a animação - animação dos itens*/
+  animation: appear .4s var(--delay) backwards; 
+  /*.4s no appear é o atraso para aparecer os itens*/
+  /*puxa os itens com delay*/
 }
 
 /* .item img {
