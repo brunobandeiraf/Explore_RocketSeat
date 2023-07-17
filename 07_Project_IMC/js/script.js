@@ -6,8 +6,17 @@ const form = document.querySelector('form')
 const inputWeight = document.querySelector('#weight')
 const inputHeight = document.querySelector('#height')
 
+// 3 maneiras de criar e atribuir função a um evento
+// form.onsubmit = function(){}
+
+// form.onsubmit = () => {}
+
+// form.onsubmit = handleSubmit 
+// function handleSubmit(){}
+
 form.onsubmit = event => {
-    event.preventDefault()
+    // Evite o padrão - não envia o formulário e não recarrega a página
+    event.preventDefault() 
 
     const weight = inputWeight.value
     const height = inputHeight.value
@@ -29,5 +38,5 @@ function displayResultMessage(result) {
     const message = `Seu IMC é de ${result}`
 
     Modal.message.innerText = message
-    Modal.open()
+    Modal.open() 
 }
