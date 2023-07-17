@@ -105,6 +105,7 @@ form button {
     background-color: var(--bg-button);
     color: var(--tt-button);
 
+    /*alinhar texto do bottão ao centro*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,6 +115,7 @@ form button {
 
     cursor: pointer;
 
+    /*transição de mudança de cor de maneira lenta*/
     transition: background .3s;
 }
 
@@ -128,26 +130,37 @@ form button:hover {
 }
 
 .modal-wrapper {
+    /*Aboslute porque será uma nova camada acima de tudo*/
     position: absolute;
+    /*Atribui 0 para bottom, top, left e right*/
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
 
-    display: grid;
+    display: grid;/*centralizar o pop-up*/
     place-content: center;
 
+    /*Sumir com a classe .modal-wrapper*/
     opacity: 0;
     visibility: hidden;
 }
 
 .modal {
     position: relative;
+    /*
+        O modal é pai do popup
+        - modal é relative
+        - popup (button) é abslute 
+
+        Dessa forma é possível definir a posição do filho em relação
+        ao pai, ou seja, colocar o item do botão na parte superior direita.
+    */
 }
 
 .modal button {
     background: none;
     border: none;
 
-    position: absolute;
+    position: absolute; /*absolute - acima de tudo*/
     top: 1.6rem;
     right: 1.6rem;
 
@@ -157,12 +170,13 @@ form button:hover {
 }
 
 .modal button:hover {
+    /*aumenta um pouco o tamanho do x do buttom*/
     transform: scale(1.1);
 }
 
 /* alert error */
 .alert-error.open {
-    visibility: visible;
+    visibility: visible; /*visibilidade*/
     opacity: 1;
     transform: translateY(0);
 }
@@ -180,6 +194,7 @@ form button:hover {
 
     visibility: hidden;
     opacity: 0;
+    /*Aparecer lentamente*/
     transform: translateY(-30px);
     transition: transform .5s;
 }
