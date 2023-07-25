@@ -14,6 +14,11 @@ const inputHeight = document.querySelector('#height')
 // form.onsubmit = handleSubmit 
 // function handleSubmit(){}
 
+// Fechar a janela de erro ao digitar no campo
+// evento é de nome input
+inputWeight.oninput = () =>  AlertError.close()
+inputHeight.oninput = () => AlertError.close()
+
 form.onsubmit = event => {
     // Evite o padrão - não envia o formulário e não recarrega a página
     event.preventDefault() 
@@ -43,3 +48,5 @@ function displayResultMessage(result) {
     Modal.message.innerText = message
     Modal.open() 
 }
+
+
