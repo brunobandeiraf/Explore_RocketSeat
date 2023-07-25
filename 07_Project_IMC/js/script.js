@@ -21,6 +21,7 @@ form.onsubmit = event => {
     const weight = inputWeight.value
     const height = inputHeight.value
 
+    // Verifica se os valores são números
     const weightOrHeightIsNotANumber = notANumber(weight) || notANumber(height)
 
     if (weightOrHeightIsNotANumber) {
@@ -28,9 +29,11 @@ form.onsubmit = event => {
         return;
     }
 
+    // Remover modal de error
     AlertError.close()
 
     const result = calculateIMC(weight, height)
+    // Mostrar o resultado
     displayResultMessage(result)
 }
 

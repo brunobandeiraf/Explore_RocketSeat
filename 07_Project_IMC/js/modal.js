@@ -19,7 +19,7 @@ Modal.buttonClose.onclick = () => {
 }
 
 window.addEventListener('keydown', handleKeydown)
-
+// Evento para identificar o botão ESC
 function handleKeydown(event) {
     if (event.key === 'Escape') {
         Modal.close()
