@@ -1,7 +1,7 @@
 import state from './state.js'
 import { controls } from './elements.js';
 import * as actions from './actions.js'
-import * as el from './elements.js'
+import * as elements from './elements.js'
 import { updateDisplay } from './timer.js';
 
 
@@ -27,21 +27,27 @@ export function registerControls() {
 }
 
 export function setMinutes() {
- el.minutes.addEventListener('focus', () => {
-    el.minutes.textContent = ""
- })
+    // Quando estiver com o focus
+    elements.minutes.addEventListener('focus', () => {
+        elements.minutes.textContent = ""
+    })
 
- el.minutes.onkeypress = (event) => /\d/.test(event.key)
+    // /\d/ só aceita números
+    elements.minutes.onkeypress = (event) => /\d/.test(event.key)
 
- el.minutes.addEventListener('blur', (event) => {
-    let time = event.currentTarget.textContent
+    // blur -  perder o foco
+    elements.minutes.addEventListener('blur', (event) => {
+        // pega o texto do elemento
+        let time = event.currentTarget.textContent
 
-    time = time > 60 ? 60 : time
+        // time é > 60, se sim, deixa 60, se não recebe time
+        time = time > 60 ? 60 : time
 
-    state.minutes = time
-    state.seconds = 0
+        state.minutes = time
+        state.seconds = 0
 
-    updateDisplay()
-    el.minutes.removeAttribute('contenteditable')
- })
+        updateDisplay() // atualiza o display
+        elements.minutes.removeAttribute('contenteditable')
+        // tira a opção de editar
+    })
 }
