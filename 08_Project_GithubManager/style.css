@@ -24,16 +24,20 @@ body * {
   font-family: var(--ff-primary);
 }
 
+/* screen read only
+  - um padrão da comunidade
+  - classe que será ocultada mas ficará disponível para os leitores de tela
+*/
 .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  overflow: hidden; /* tranbordando na caixa*/
+  clip: rect(0, 0, 0, 0);/* um retângulo que não existe*/
   white-space: nowrap;
-  border-width: 0;
+  border-width: 0; /* forçar para ficar em uma única linha*/
 }
 
 #app {
@@ -45,7 +49,8 @@ body * {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
+  /* um para cada lado com o space-between */
 
   margin: 2.5rem 0;
 }
@@ -63,7 +68,7 @@ header h1 {
 .search input {
   height: 3.2rem;
   border: 1px solid #ccc;
-  border-radius: .4rem 0 0 .4rem;
+  border-radius: .4rem 0 0 .4rem; /*esquerda, direita, baixo na direita e baixo na esquerda*/
   padding: 0 .8rem;
 }
 
@@ -83,7 +88,7 @@ header h1 {
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /*remove os espaço entre as colunas*/
 
   box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
 }
@@ -108,10 +113,12 @@ table th:last-child {
   border-top-right-radius: .4rem;
 }
 
+/* Colunas pares */
 table tr:nth-child(even) {
   background: #eee;
 }
 
+/* Colunas impares */
 table tr:nth-child(odd) {
   background: #ddd;
 }
@@ -132,7 +139,7 @@ td.user img {
   width: 5rem;
   height: 5rem;
 
-  object-fit: cover;
+  object-fit: cover; /*encaixa a imagem corretamente*/
   border-radius: 50%;
 }
 
