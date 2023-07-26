@@ -4,11 +4,19 @@ export class GithubUser {
 
     return fetch(endpoint)
     .then(data => data.json())
-    .then(({ login, name, public_repos, followers }) => ({
-      login,
-      name,
-      public_repos,
-      followers
-    }))
+    .then(
+      ({ 
+        login, 
+        name, 
+        public_repos, 
+        followers 
+      }) => 
+      ({
+        login,
+        name,
+        public_repos,
+        followers
+      })
+    )
   }
 }
