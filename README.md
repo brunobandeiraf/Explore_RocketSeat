@@ -1,4 +1,4 @@
-# Explore_RocketSeat
+# Revisão
 
 Estudo das tecnologias
 - HTML (HyperText Markup Language)
